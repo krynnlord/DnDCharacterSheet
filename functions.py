@@ -54,7 +54,7 @@ def createSheet(temp_Player):
     cursor.hide()
     shortname = name[:20]
     
-    temp_Player = Player(shortname, "dwarf dude", "Warrior", "Paladin", 10, 100, 1, 1, 1,1,1,66,0,1)
+    temp_Player = Player(shortname, "dwarf dude", "Warrior", "Human", "Paladin", 100, 1, 1, 1,1,1,66,0,1)
     temp_Player.hp = Player.hp(122,100,100)
     temp_Player.intelligence(1,10,1,1,1,1,1,1)
     

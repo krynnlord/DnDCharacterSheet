@@ -17,7 +17,7 @@ GameDescInfo = {
 }
 
 # Create Temp Player Sheet
-newplayer = Player("Rich", "dwarf dude", "Warrior", "Paladin", 10, 100, 1, 1, 1,1,1,66,0,1)
+newplayer = Player("Rich", "dwarfdude", "Warrior", "Human", "Paladin", 100, 1, 1, 1,1,1,66,0,1)
 newplayer.hp = Player.hp(100,100,100)
 newplayer.intelligence(1,10,1,1,1,1,1,1)
 
@@ -25,7 +25,12 @@ newplayer.intelligence(1,10,1,1,1,1,1,1)
 def openSheet():
     os.system('cls')
     newplayer = load_character_sheet()
-    print(newplayer.name,newplayer.hp.current_hp)
+    print('{0: <25}'.format("Name:" + newplayer.name), end=" ") 
+    print('{0: <25}'.format("Class:" + newplayer.p_class) , end=" ")
+    print('{0: <25}'.format("Subclass:" + str(newplayer.p_subclass)))
+    print('{0: <25}'.format("HP:" + str(newplayer.hp.current_hp)), end=" ") 
+    print('{0: <25}'.format("Max HP:" + str(newplayer.hp.max_hp)), end=" ")
+    print('{0: <25}'.format("Temp HP:" + str(newplayer.hp.temp_hp)), end=" ")
     exit(0)
     return
 
